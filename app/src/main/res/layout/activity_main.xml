@@ -5,93 +5,100 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/angkor"
-        android:text="Tela de Login"
+        android:text="@string/tela_de_login"
         android:textColor="#020997"
-        android:textSize="50dp"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.149" />
+        app:layout_constraintVertical_bias="0.043" />
 
-    <EditText
-        android:id="@+id/editTextTextPassword"
-        android:layout_width="419dp"
-        android:layout_height="80dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:text="1234456"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/tvEmailLabel"
+        android:layout_width="166dp"
+        android:layout_height="51dp"
+        android:text="@string/email"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintHorizontal_bias="0.122"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.568" />
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        android:layout_marginTop="40dp"/>
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="410dp"
-        android:layout_height="80dp"
-        android:ems="10"
+        android:id="@+id/etEmail"
+        android:layout_width="607dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/digite_seu_email"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintHorizontal_bias="0.434"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.38" />
+        app:layout_constraintTop_toBottomOf="@id/tvEmailLabel" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="603dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="36dp"
+        android:hint="@string/digite_sua_senha"
+        android:inputType="textPassword"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPasswordLabel" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email:"
-        android:textSize="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/tvPasswordLabel"
+        android:layout_width="166dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/senha"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.253"
+        app:layout_constraintHorizontal_bias="0.127"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.321" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Senha:"
-        android:textSize="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.269"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.475" />
+        app:layout_constraintTop_toBottomOf="@id/etEmail" />
 
     <Button
-        android:id="@+id/btnlogin"
-        android:layout_width="360dp"
-        android:layout_height="80dp"
-        android:background="@color/black"
-        android:text="Entrar"
+        android:id="@+id/btnLogin"
+        android:layout_width="500dp"
+        android:layout_height="90dp"
+        android:background="#03A9F4"
+        android:text="@string/entrar"
+        android:textColor="@android:color/white"
+        android:textColorLink="#3CF0F0"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.544"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.768" />
+        app:layout_constraintVertical_bias="0.913" />
 
     <TextView
-        android:id="@+id/txtMsg"
-        android:layout_height="wrap_content"
+        android:id="@+id/txtMessagem"
         android:layout_width="wrap_content"
-        android:text="@string/b_vindo"
-        />
+        android:layout_height="wrap_content"
+        android:text="@string/bem_vindo_ao_sistema"
+        android:textSize="30sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

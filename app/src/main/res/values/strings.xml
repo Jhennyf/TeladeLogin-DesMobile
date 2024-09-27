@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">TeladeLogin</string>
     <string name="b_vindo">Seja bem-vindo ao app</string>
+    <string name="entrar">Entrar</string>
+    <string name="bem_vindo_ao_sistema">Bem-vindo ao sistema!</string>
+    <string name="digite_sua_senha">Digite sua senha</string>
+    <string name="senha">Senha:</string>
+    <string name="digite_seu_email">Digite seu email</string>
+    <string name="email">Email:</string>
+    <string name="tela_de_login">Tela de Login</string>
 </resources>
